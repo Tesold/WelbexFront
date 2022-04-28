@@ -19,10 +19,10 @@ export function TodoItem({todo, key, index, callback}:any)
     
     
     if(todo.PathImage)
-    pathImage = "http://localhost/"+todo.PathImage.split("\\")[2];
+    pathImage = "http://188.225.56.228/"+todo.PathImage.split("/")[2];
 
     if(todo.PathVideo)
-    pathVideo = "http://localhost/"+todo.PathVideo.split("\\")[2];
+    pathVideo = "http://188.225.56.228/"+todo.PathVideo.split("/")[2];
 
 
     const videoJsOptions = {
@@ -46,9 +46,8 @@ export function TodoItem({todo, key, index, callback}:any)
 
     }
 
-    console.log(todo.PathImage)
+    console.log("p "+pathImage)
     console.log(pathVideo)
-    String.toString().slice()
     const splitDate = todo.createdAt.split('-');
     const date= [splitDate[2].slice(0,2), splitDate[1], splitDate[0]].join('.');
 

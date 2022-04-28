@@ -2,7 +2,7 @@ import axios from "axios";
 import { getAccessToken, getRefreshToken, getUser, setAccessToken, setRefreshToken, setUser } from "../store/store";
 
 const axiosInstance = axios.create({ 
-    baseURL: 'http://localhost/',
+    baseURL: 'http://188.225.56.228/',
 });
 
 
