@@ -84,7 +84,7 @@ function App() {
             callbackTasks();
           }
         }
-        catch{alert("Проверьте Email")}
+        catch{alert("Не вышло")}
     }
     else{
       alert("Заполните все поля!")
@@ -210,7 +210,7 @@ function App() {
     <div className={styles.container}>
       <Head/>
       <TodoList todos={arr}/>
-      <button style={{marginBottom: 20, marginTop: 10}} onClick={()=>setIsAdd(true)}>Добавить</button>
+        {logIn?<button style={{marginBottom: 20, marginTop: 10}} onClick={()=>setIsAdd(true)}>Добавить</button>:null}
       {isAdd?<div style={{backgroundColor: 'lightgrey', width: 500, flexDirection: 'column', marginBottom: 15, display:'flex'}} className={styles.ItemContainer}>
             <div style={{display: 'flex', width: '100%'}}>
                 <textarea onBlur={(e:any)=>setText(e.target.value)} placeholder='Задача' style={{width: '100%', resize: 'none', marginLeft: 'auto', marginRight: 'auto'}}></textarea>
